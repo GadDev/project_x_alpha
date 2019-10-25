@@ -1,7 +1,6 @@
 {
     "parser": "babel-eslint",
     "extends": [
-        "react-app",
         "airbnb",
         "prettier"
     ],
@@ -13,16 +12,6 @@
         "react-hooks"
     ],
     "rules": {
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "jsx-a11y/label-has-for": [
-            2,
-            {
-                "components": [
-                    "label"
-                ],
-                "allowChildren": true
-            }
-        ]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     }
 }
