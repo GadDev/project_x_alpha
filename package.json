@@ -52,9 +52,14 @@
             "yarn run test:lint-staged",
             "eslint --ext .js,.jsx",
             "prettier --write",
-            "git add"
+            "git add",
+            "eslint --fix"
         ],
         "*.{json,md}": [
+            "prettier --write",
+            "git add"
+        ],
+        "*.{js,css,json,md}": [
             "prettier --write",
             "git add"
         ]
