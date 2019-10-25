@@ -25,16 +25,16 @@
   },
  
   "lint-staged": {
-    "src/**/*.svg": [
+    "src/*.svg": [
       "svgo --config '{\"plugins\":[{\"removeUnknownsAndDefaults\":{\"keepDataAttrs\":false},\"removeDimensions\":true,\"removeViewBox\":false}]}' --",
       "prettier --single-quote --write --parser=html",
       "git add"
     ],
-    "src/**/*.{css,html}": [
+    "src/*.{css,html}": [
       "prettier --single-quote --write",
       "git add"
     ],
-    "src/**/*.{js,jsx,json}": [
+    "src/*.{js,jsx,json}": [
       "eslint . --fix",
       "git add"
     ]
