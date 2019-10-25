@@ -23,11 +23,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+ 
   "lint-staged": {
     "src/**/*.svg": [
       "svgo --config '{\"plugins\":[{\"removeUnknownsAndDefaults\":{\"keepDataAttrs\":false},\"removeDimensions\":true,\"removeViewBox\":false}]}' --",
@@ -42,6 +38,11 @@
       "eslint . --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
