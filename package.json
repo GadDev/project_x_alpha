@@ -2,9 +2,11 @@
   "name": "alpha",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gaddev.github.io/project_x_alpha/",
   "dependencies": {
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
+    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -42,6 +44,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "lint": "eslint --ext .js,.jsx .",
     "test": "react-scripts test",
