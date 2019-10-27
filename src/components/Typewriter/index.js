@@ -1,4 +1,3 @@
-import "./typewriter.css";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
@@ -49,20 +48,13 @@ class Typewriter extends Component {
           clearInterval(this.timer);
           let currentItemIndex = this.state.currentItemIndex + 1;
           if (currentItemIndex === options.length) {
-            if (loop) {
-              currentItemIndex = 0;
-              setTimeout(() => this.typeText(currentItemIndex), 1000);
-            } else {
-              console.log("non loop");
-              this.showText("continue..");
-              return false;
-            }
+            loop ? (currentItemIndex = 0) : this.showText("continue..");
           }
           setTimeout(() => this.typeText(currentItemIndex), 1000);
         }
         charCount--;
       });
-    }, 150);
+    }, 100);
   }
 
   render() {

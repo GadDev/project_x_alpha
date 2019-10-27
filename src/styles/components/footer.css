@@ -1,0 +1,11 @@
+footer {
+  height: 5rem;
+  text-align: center;
+}
+
+.footer__inner-block {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,15 +1,13 @@
 import React from "react";
 
-import "./App.css";
-
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Typewriter from "./components/Typewriter";
 
 const options = [
-  "Hello my name's Alexandre",
-  "I'm fornt end developer",
+  "Hello my name's Alexandre, I'm front-end developer",
+  "I'm front-end developer",
   "And I love croissants"
 ];
 
@@ -18,7 +16,9 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <Typewriter options={options} loop={false} />
+        <div className="typewriper__wrapper">
+          <Typewriter options={options} />
+        </div>
       </main>
       <Footer />
     </div>

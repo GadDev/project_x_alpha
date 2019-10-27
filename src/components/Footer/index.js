@@ -1,9 +1,11 @@
-import "./footer.css";
 import React from "react";
 
 const Footer = () => (
   <footer>
-    <div>footer</div>
+    <div className="footer__inner-block">
+      <h4>Alexandre gadaix</h4>
+      <small>2019</small>
+    </div>
   </footer>
 );
 export default Footer;
