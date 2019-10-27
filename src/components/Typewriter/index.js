@@ -48,7 +48,9 @@ class Typewriter extends Component {
           clearInterval(this.timer);
           let currentItemIndex = this.state.currentItemIndex + 1;
           if (currentItemIndex === options.length) {
-            loop ? (currentItemIndex = 0) : this.showText("continue..");
+            loop
+              ? (currentItemIndex = 0)
+              : this.showText("do you like croissants?");
           }
           setTimeout(() => this.typeText(currentItemIndex), 1000);
         }

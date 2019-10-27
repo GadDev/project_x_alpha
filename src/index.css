@@ -1,53 +1,42 @@
-@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
-:root {
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");:root {
   --fontSize: 1rem;
   --mainColor: #12345678;
   --secondaryColor: rgba(102, 51, 153, 0.9);
-}
-html {
-  overflow: hidden auto;
+}html {
   overflow-x: hidden;
   overflow-y: auto;
-}
-@media (max-width: 50rem) {
+  overflow: hidden auto;
+}@media (max-width: 50rem) {
   body {
     color: var(--mainColor);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-      Noto Sans, sans-serif;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     font-size: var(--fontSize);
     line-height: calc(var(--fontSize) * 1.5);
     overflow-wrap: break-word;
     padding-inline: calc(var(--fontSize) / 2 + 1px);
   }
-}
-header {
+}header {
   min-height: 4rem;
   padding: 1.2rem 0;
-}
-footer {
+}footer {
   height: 5rem;
   text-align: center;
-}
-.footer__inner-block {
+}.footer__inner-block {
   align-content: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.typewriter {
+}.typewriter {
   display: flex;
   justify-content: center;
   margin: 25px 0;
-}
-.typewriter__type {
+}.typewriter__type {
   font-family: "Cutive Mono", monospace;
   font-size: 28px;
-}
-.typewriter__cursor {
+}.typewriter__cursor {
   background-color: #363636;
   width: 1px;
-}
-main {
+}main {
   min-height: calc(100vh - 13rem);
   padding: 0 1.5rem;
 }
