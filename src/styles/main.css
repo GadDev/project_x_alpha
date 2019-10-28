@@ -2,8 +2,3 @@
 @import "components/header.css";
 @import "components/footer.css";
 @import "components/typewriter.css";
-
-main {
-  min-height: calc(100vh - 13rem);
-  padding: 0 1.5rem;
-}

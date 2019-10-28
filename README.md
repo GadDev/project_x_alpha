@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -38,6 +37,57 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `yarn build:css`
+
+PostCSS
+Builds the app style for production to the `index.css` file.<br />
+Ouput style from main.css to index.css
+
+See https://www.npmjs.com/package/postcss-cli.
+
+### `yarn watch:css`
+
+PostCSS
+Builds the app style for production to the `index.css` file.<br />
+Ouput style from main.css to index.css, and watch files for changes and recompile as needed
+See https://www.npmjs.com/package/postcss-cli.
+
+### `yarn deploy`
+
+Gh-pages Command Line Utility
+Publish files to a gh-pages branch on GitHub (or any other branch anywhere else).
+From your build folder to your gh-pages branch
+IMPORTANT : run `yarn predeploy` before.
+See https://www.npmjs.com/package/gh-pages
+
+### `yarn lint`
+
+Lint script.
+IMPORTANT : run `yarn predeploy` before.
+See https://eslint.org/docs/user-guide/command-line-interface
+
+### `yarn lint:fix`
+
+Lint script and fix.
+IMPORTANT : run `yarn predeploy` before.
+See https://eslint.org/docs/user-guide/command-line-interface
+
+### `yarn test`
+
+Run test with Jest and Enzyme
+See https://jestjs.io/
+
+### `yarn test:watch`
+
+Run test with Jest and Enzyme and watch changes on test files
+See https://jestjs.io/
+
+### `yarn test:coverage`
+
+Run test with Jest and Enzyme and generate coverage.
+Coverage available in the file ./coverage/lcov-report/index.html
+See https://istanbul.js.org/
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -67,7 +117,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
+
 # project_x_alpha
+
 Alpha, I am Alex
->>>>>>> d69573525b7e6059404d34adf37b91419757e632

@@ -6,6 +6,9 @@
   overflow-x: hidden;
   overflow-y: auto;
   overflow: hidden auto;
+}main {
+  min-height: calc(100vh - 13rem);
+  padding: 0 1.5rem;
 }@media (max-width: 50rem) {
   body {
     color: var(--mainColor);
@@ -36,7 +39,4 @@
 }.typewriter__cursor {
   background-color: #363636;
   width: 1px;
-}main {
-  min-height: calc(100vh - 13rem);
-  padding: 0 1.5rem;
 }

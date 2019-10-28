@@ -1,4 +1,4 @@
-@custom-media --viewport-medium (width <= 50rem);
+@custom-media --viewport-medium (width <=50rem);
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
 :root {
@@ -9,6 +9,11 @@
 
 html {
   overflow: hidden auto;
+}
+
+main {
+  min-height: calc(100vh - 13rem);
+  padding: 0 1.5rem;
 }
 
 @media (--viewport-medium) {
