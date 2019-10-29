@@ -1,42 +1,74 @@
-@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");:root {
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+:root {
   --fontSize: 1rem;
-  --mainColor: #12345678;
+  --mainColor: rgba(18, 52, 86, 0.47059);
   --secondaryColor: rgba(102, 51, 153, 0.9);
-}html {
+}
+html {
+  overflow: hidden auto;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow: hidden auto;
-}main {
+}
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   min-height: calc(100vh - 13rem);
   padding: 0 1.5rem;
-}@media (max-width: 50rem) {
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 50rem) {
   body {
+    color: rgba(18, 52, 86, 0.47059);
     color: var(--mainColor);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+      Noto Sans, sans-serif;
+    font-size: 1rem;
     font-size: var(--fontSize);
+    line-height: calc(1rem * 1.5);
     line-height: calc(var(--fontSize) * 1.5);
-    overflow-wrap: break-word;
-    padding-inline: calc(var(--fontSize) / 2 + 1px);
+    margin: 0;
+    word-wrap: break-word;
   }
-}header {
+}
+header {
+  align-items: center;
+  border-bottom: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
   min-height: 4rem;
-  padding: 1.2rem 0;
-}footer {
+  padding: 0 1.2rem;
+}
+.logo__symbol {
+  background-color: #000;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+}
+footer {
   height: 5rem;
   text-align: center;
-}.footer__inner-block {
+}
+.footer__inner-block {
   align-content: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}.typewriter {
+}
+.typewriter {
   display: flex;
   justify-content: center;
-  margin: 25px 0;
-}.typewriter__type {
+  margin: 155px 0;
+}
+.typewriter__type {
   font-family: "Cutive Mono", monospace;
   font-size: 28px;
-}.typewriter__cursor {
+}
+.typewriter__cursor {
   background-color: #363636;
   width: 1px;
 }

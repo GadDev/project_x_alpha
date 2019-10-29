@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 class Typewriter extends Component {
   state = {
     text: "",
-    currentItemIndex: 0
+    currentItemIndex: 0,
+    displayCursor: false
   };
 
   componentDidMount() {
@@ -19,15 +21,21 @@ class Typewriter extends Component {
   }
 
   showText(text, timeDisplaySpeed = 200, delayhideText = 2500) {
+    const { loop, options, triggerEnd } = this.props;
+    const { currentItemIndex } = this.state;
     let charCount = 0;
     this.timer = setInterval(() => {
       this.setState({ text: text.substr(0, charCount) }, () => {
         if (charCount === text.length) {
-          if (text !== "continue..") {
+          if (!loop && currentItemIndex + 1 === options.length) {
+            this.setState({ displayCursor: true });
+            triggerEnd();
             clearInterval(this.timer);
-            setTimeout(() => this.hideText(text), delayhideText);
+            return false;
           }
+
           clearInterval(this.timer);
+          setTimeout(() => this.hideText(text), delayhideText);
         }
 
         charCount++;
@@ -48,9 +56,7 @@ class Typewriter extends Component {
           clearInterval(this.timer);
           let currentItemIndex = this.state.currentItemIndex + 1;
           if (currentItemIndex === options.length) {
-            loop
-              ? (currentItemIndex = 0)
-              : this.showText("do you like croissants?");
+            loop && (currentItemIndex = 0);
           }
           setTimeout(() => this.typeText(currentItemIndex), 1000);
         }
@@ -60,10 +66,15 @@ class Typewriter extends Component {
   }
 
   render() {
+    const { displayCursor } = this.state;
+    const classCursor = classNames({
+      typewriter__cursor: true,
+      hidden: displayCursor
+    });
     return (
       <div className="typewriter">
         <div className="typewriter__type">{this.state.text}</div>
-        <div className="typewriter__cursor" />
+        <div className={classCursor} />
       </div>
     );
   }
@@ -71,11 +82,13 @@ class Typewriter extends Component {
 
 Typewriter.propTypes = {
   loop: PropTypes.bool,
-  options: PropTypes.arrayOf(PropTypes.string).isRequired
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  triggerEnd: PropTypes.func
 };
 
 Typewriter.defaultProps = {
-  loop: true
+  loop: false,
+  triggerEnd: () => {}
 };
 
 export default Typewriter;

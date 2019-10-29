@@ -12,17 +12,23 @@ html {
 }
 
 main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   min-height: calc(100vh - 13rem);
   padding: 0 1.5rem;
 }
 
+.hidden {
+  display: none;
+}
 @media (--viewport-medium) {
   body {
     color: var(--mainColor);
     font-family: system-ui;
     font-size: var(--fontSize);
     line-height: calc(var(--fontSize) * 1.5);
+    margin: 0;
     overflow-wrap: break-word;
-    padding-inline: calc(var(--fontSize) / 2 + 1px);
   }
 }
